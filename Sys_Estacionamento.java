@@ -92,18 +92,26 @@ public class Sys_Estacionamento {
                             }
                             if (tempo_estadia == 0) {
                                 System.out.println("PASSAGEM LIBERADA!");
-                            } else if (tempo_estadia >= 24) {
+                            } 
+                            else if (tempo_estadia >= 24) {
                                 valor_estadia = 80;
-                            } else if (tempo_estadia >= 7) {
+                            } 
+                            else if (tempo_estadia >= 7) {
                                 valor_estadia = 60;
-                            } else if (tempo_estadia >= 5) {
+                            } 
+                            else if (tempo_estadia >= 5) {
                                 valor_estadia = 45;
-                            } else if (tempo_estadia >= 3) {
+                            } 
+                            else if (tempo_estadia >= 3) {
                                 valor_estadia = 30;
+                            }
+                            else if (tempo_estadia >= 1) {
+                                valor_estadia = 15;
                             }
                             System.out.println("Recibo: \nO carro com placa " + placa + " esteve no estacionamento por " + tempo_estadia + " horas. O valor da estadia a ser cobrado é de R$ " + valor_estadia);
                         }
-                    } else {
+                    } 
+                    else {
                         System.out.println("Veículo não encontrado!");
                     }
                     break;
@@ -113,7 +121,8 @@ public class Sys_Estacionamento {
                 default:
                     System.out.println("Opção inválida!");
             }
-        } while (operacao != 6);
+        } 
+        while (operacao != 6);
         scanner.close();
     }
 }
