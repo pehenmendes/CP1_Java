@@ -101,7 +101,7 @@ public class Sys_Estacionamento {
                             } else if (tempo_estadia >= 3) {
                                 valor_estadia = 30;
                             }
-                            System.out.println("O carro com placa " + placa + " esteve no estacionamento por " + tempo_estadia + " horas. O valor da estadia é R$ " + valor_estadia);
+                            System.out.println("Recibo: \nO carro com placa " + placa + " esteve no estacionamento por " + tempo_estadia + " horas. O valor da estadia a ser cobrado é de R$ " + valor_estadia);
                         }
                     } else {
                         System.out.println("Veículo não encontrado!");
