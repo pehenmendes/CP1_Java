@@ -5,8 +5,8 @@ public class Main {
         Scanner input = new Scanner(System.in);
         String menu = "1-Cadastro\n2-Atualizar\n3-Consultar\n4-Excluir\n5-Sair\nEscolha uma opção: ", pula = "\n";
         String menu2 = "1-Marca do carro\n2-Modelo do carro\n3-Placa do carro\n4-Horário de entrada\n";
-        String marca = "", modelo = "", placa = "", pesquisa = "";
-        int opcao = 0, opcao2 = 0, hrEntrada = 0;
+        String marca = "", modelo = "", placa = "";
+        int opcao = 0, opcao2, hrEntrada = 0;
 
         while (opcao != 5) {
             System.out.print(pula + menu);
@@ -23,9 +23,9 @@ public class Main {
                         placa = input.next();
                         System.out.print("Digite o horário de entrada do carro: ");
                         hrEntrada = input.nextInt();
-                        System.out.print("\nCadastra feito com sucesso!\n");
+                        System.out.print("\nCadastro feito com sucesso!\n");
                     } else {
-                        System.out.print(pula + "Não há veículos cadastrados." + pula);
+                        System.out.print(pula + "Banco de dados cheio." + pula);
                     }
                     break;
                 case 2:
@@ -68,7 +68,7 @@ public class Main {
                     break;
                 case 4:
                     if (!marca.isBlank() || !modelo.isBlank() || !placa.isBlank() || (hrEntrada > 5 && hrEntrada < 23)) {
-                        System.out.print(pula + "Excluir dados:" + pula);
+                        System.out.print(pula + "Excluindo dados..." + pula);
                         marca = ""; modelo = ""; placa = ""; hrEntrada = 0;
                     } else {
                         System.out.print(pula + "Não há veículos cadastrados." + pula);
